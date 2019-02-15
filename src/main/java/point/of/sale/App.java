@@ -11,6 +11,10 @@ public class App {
     public static void main(String[] args) {
         Scanner input = new Scanner (System.in);
         
+        HR employeeRoster = new HR();
+        employeeRoster.addEmployee(new Employee(100000, "Matt Fry"));
+        
+        
     	System.out.println("****************************************************************************");
     	System.out.println("                Welcome to the SnS Emergency POS System                     ");
     	System.out.println("****************************************************************************");
@@ -50,6 +54,30 @@ public class App {
     		
     		switch (mgrOption) {
     		case 1://Hire or borrow employee 
+    			
+    			System.out.println("*****************************************************************************");
+    			System.out.println("                          ADD NEW EMPLOYEE                                   ");
+    			System.out.println("  Enter the name of the Associate that needs to be added:  ");
+    			String empName = input.next();
+    			
+    			
+    			
+    			int empID = 100000;
+    			int checkPayrollEntries = employeeRoster.getNumofEmployees();
+    			int newEmpID = empID + checkPayrollEntries;
+    			
+    			Employee newEmp = new Employee(newEmpID, empName);
+    			
+    			employeeRoster.addEmployee(newEmp);
+    			
+    			Employee confirmHire = employeeRoster.getEmployeeID(newEmpID);
+    			
+    			System.out.println("The following employee information has been added:");
+    			System.out.println(confirmHire.employeeID() + "  " + confirmHire.employeeName());
+    			input.next();
+    			
+    			break;
+    			
     		case 2:// Terminate Employee
     		case 3://Update Employe3 Information
     		}
