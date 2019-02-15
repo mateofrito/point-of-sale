@@ -5,9 +5,17 @@ package point.of.sale;
 
 import org.junit.Test;
 
-
+import employee.Doctor;
+import employee.Employee;
+import employee.Janitor;
+import employee.Nurse;
+import employee.Receptionist;
+import employee.Surgeon;
+import employee.VampireJanitor;
 
 import static org.junit.Assert.*;
+
+import java.util.Scanner;
 
 public class AppTest {
     @Test 
@@ -43,6 +51,41 @@ public class AppTest {
     	
     	
     	
+    	
+    }
+     @Test
+    public void addEmployeeWithNewID() {
+    	Scanner input = new Scanner(System.in);
+    	
+    	HR testTable = new HR();
+    	testTable.addEmployee(new Employee(100000, "Matt Fry"));
+    	testTable.addEmployee(new Employee(100001, "Ben Hunter"));
+    	System.out.println("Enter Name");
+    	String empName = input.nextLine();
+    	int empID = 100000;
+    	
+    	int checkPayrollEntries = testTable.getNumofEmployees();
+    	int newEmpID = empID + checkPayrollEntries;
+    	
+    	
+    	Employee newEmp = new Employee(newEmpID, empName);
+    	
+    	
+		int intialEmployees = testTable.getNumofEmployees();
+		testTable.addEmployee(newEmp);
+		int moreEmployees = testTable.getNumofEmployees();
+		
+		for (Employee employees : testTable.getEmployees().values())
+		{
+			
+			
+			System.out.println(employees.employeeID() + " " + employees.employeeName());
+			
+			
+			
+			
+		}
+		assertEquals(intialEmployees + 1, moreEmployees);
     	
     }
 }

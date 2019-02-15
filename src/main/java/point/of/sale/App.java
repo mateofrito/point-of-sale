@@ -17,7 +17,9 @@ public class App {
     	System.out.println("NOTICE: YOUR NORMAL POS HAS FAILED.  PLEASE CONTACT THE HELPDESK IMMEDIATELY!");
     	System.out.println("MOST POS FUNCTIONS CAN BE HANDLED THROUGH COMMAND LINE INPUT.  PLEASE SEE ");
     	System.out.println("THE MENU BELOW FOR A LIST OF OPTIONS.");
+    	boolean posIsOn = true;
     	
+    	while(posIsOn) {
     	System.out.println("*****************************************************************************");
     	System.out.println("                               MAIN MENU");
     	System.out.println("                           1.  Manager Functions");
@@ -32,9 +34,9 @@ public class App {
     	switch(userOption) {
     	case 1://manager functions
     		
-    		boolean mgrMenu = true;
+    		boolean mgrMenuIsOn = true;
     		
-    		while (mgrMenu) {
+    		while (mgrMenuIsOn) {
     		System.out.println("*****************************************************************************");
         	System.out.println("                               MANAGER MENU");
         	System.out.println("                           1.  Hire/Borrow Employee");
@@ -47,9 +49,9 @@ public class App {
     		
     		
     		switch (mgrOption) {
-    		case 1://Hire or borrow employee
+    		case 1://Hire or borrow employee 
     		case 2:// Terminate Employee
-    		case 3://Update Employe Information
+    		case 3://Update Employe3 Information
     		}
     		
     		
@@ -57,7 +59,9 @@ public class App {
     	case 2://Add/Edit ORders
     		
     	case 3://Cash Out Orders
-    	}
+    	}//userOptionSwitch
+    	}//while posIsOn
 
-    }
-}
+    	}//close main method
+    }//close app class
+

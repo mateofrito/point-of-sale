@@ -22,4 +22,10 @@ public class Employee {
 		return empID;
 	}
 
+
+	public String employeeName() {
+		// TODO Auto-generated method stub
+		return empName;
+	}
+
 }
