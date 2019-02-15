@@ -14,9 +14,50 @@ public class App {
     	System.out.println("****************************************************************************");
     	System.out.println("                Welcome to the SnS Emergency POS System                     ");
     	System.out.println("****************************************************************************");
+    	System.out.println("NOTICE: YOUR NORMAL POS HAS FAILED.  PLEASE CONTACT THE HELPDESK IMMEDIATELY!");
+    	System.out.println("MOST POS FUNCTIONS CAN BE HANDLED THROUGH COMMAND LINE INPUT.  PLEASE SEE ");
+    	System.out.println("THE MENU BELOW FOR A LIST OF OPTIONS.");
     	
+    	System.out.println("*****************************************************************************");
+    	System.out.println("                               MAIN MENU");
+    	System.out.println("                           1.  Manager Functions");
+    	System.out.println("                           2.  Add/Edit Orders Menu");
+    	System.out.println("                           3.  Cash Out Open Checks");
+    	System.out.println("                                                                              ");
+    	System.out.println("******************************************************************************");
+    	System.out.println("Select an Option:");
     	
+    	int userOption = input.nextInt();
     	
+    	switch(userOption) {
+    	case 1://manager functions
+    		
+    		boolean mgrMenu = true;
+    		
+    		while (mgrMenu) {
+    		System.out.println("*****************************************************************************");
+        	System.out.println("                               MANAGER MENU");
+        	System.out.println("                           1.  Hire/Borrow Employee");
+        	System.out.println("                           2.  Terminate Employee");
+        	System.out.println("                           3.  Update Employee Information");
+        	System.out.println("                           4.  Return to Main Menu                           ");
+        	System.out.println("*****************************************************************************");
+        	System.out.println("Select an Option:");
+    		int mgrOption = input.nextInt();
+    		
+    		
+    		switch (mgrOption) {
+    		case 1://Hire or borrow employee
+    		case 2:// Terminate Employee
+    		case 3://Update Employe Information
+    		}
+    		
+    		
+    		}
+    	case 2://Add/Edit ORders
+    		
+    	case 3://Cash Out Orders
+    	}
 
     }
 }
